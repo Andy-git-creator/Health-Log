@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="form-title">录入身体数据</view>
+  <view class="form">
+    <view class="form-item">
+      <text class="label">心率(次/分)：</text>
+      <input type="number" placeholder="30-250之间" bindinput="inputHeartRate"/>
+    </view>
+    <view class="form-item">
+      <text class="label">收缩压(mmHg)：</text>
+      <input type="number" placeholder="60-250之间" bindinput="inputSystolic"/>
+    </view>
+    <view class="form-item">
+      <text class="label">舒张压(mmHg)：</text>
+      <input type="number" placeholder="40-150之间" bindinput="inputDiastolic"/>
+    </view>
+    <view class="form-item">
+      <text class="label">体重(kg)：</text>
+      <input type="number" placeholder="最小0.1" bindinput="inputWeight"/>
+    </view>
+    <button class="save-btn" bindtap="saveData">保存数据</button>
+  </view>
+</view>

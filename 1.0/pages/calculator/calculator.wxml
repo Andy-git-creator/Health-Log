@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="tab-bar">
+    <view class="tab-item {{activeTab === 'bmi' ? 'active' : ''}}" bindtap="switchTab" data-tab="bmi">
+      BMI计算
+    </view>
+    <view class="tab-item {{activeTab === 'cmi' ? 'active' : ''}}" bindtap="switchTab" data-tab="cmi">
+      CMI计算
+    </view>
+  </view>
+
+  <!-- BMI计算表单 -->
+  <view class="form" wx:if="{{activeTab === 'bmi'}}">
+    <view class="form-item">
+      <text class="label">标准选择：</text>
+      <radio-group bindchange="changeStandard">
+        <label class="radio">
+          <radio value="1" checked="{{standard === 1}}"/> 亚洲标准
+        </label>
+        <label class="radio">
+          <radio value="2" checked="{{standard === 2}}"/> 国际标准
+        </label>
+      </radio-group>
+    </view>
+    <view class="form-item">
+      <text class="label">身高(cm)：</text>
+      <input type="number" placeholder="请输入身高" bindinput="inputHeight"/>
+    </view>
+    <view class="form-item">
+      <text class="label">体重(kg)：</text>
+      <input type="number" placeholder="请输入体重" bindinput="inputWeight"/>
+    </view>
+    <button class="calc-btn" bindtap="calcBMI">计算BMI</button>
+    <view class="result" wx:if="{{bmiResult}}">
+      <text class="result-text">BMI值：{{bmiValue.toFixed(2)}}</text>
+      <text class="result-desc" style="color: {{resultColor}}">{{bmiDesc}}</text>
+    </view>
+  </view>
+
+  <!-- CMI计算表单 -->
+  <view class="form" wx:if="{{activeTab === 'cmi'}}">
+    <view class="form-item">
+      <text class="label">身高(cm)：</text>
+      <input type="number" placeholder="请输入身高" bindinput="inputCMIHeight"/>
+    </view>
+    <view class="form-item">
+      <text class="label">腰围(cm)：</text>
+      <input type="number" placeholder="请输入腰围" bindinput="inputWaist"/>
+    </view>
+    <view class="form-item">
+      <text class="label">甘油三酯(mmol/L)：</text>
+      <input type="number" placeholder="请输入甘油三酯" bindinput="inputTG"/>
+    </view>
+    <view class="form-item">
+      <text class="label">高密度脂蛋白(mmol/L)：</text>
+      <input type="number" placeholder="请输入高密度脂蛋白" bindinput="inputHDL"/>
+    </view>
+    <button class="calc-btn" bindtap="calcCMI">计算CMI</button>
+    <view class="result" wx:if="{{cmiResult}}">
+      <text class="result-text">CMI值：{{cmiValue.toFixed(2)}}</text>
+      <text class="result-desc" style="color: {{cmiColor}}">{{cmiDesc}}</text>
+    </view>
+  </view>
+</view>

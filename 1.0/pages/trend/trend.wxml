@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="page-title">身体数据趋势</view>
+
+  <!-- 空数据提示 -->
+  <view class="empty-tip" wx:if="{{bodyData.length === 0}}">
+    <text class="empty-icon">📈</text>
+    <text class="empty-text">暂无数据，无法生成趋势图表</text>
+    <button class="go-record-btn" bindtap="goToRecorder">立即录入数据</button>
+  </view>
+
+  <!-- 图表区域（有数据时显示） -->
+  <scroll-view class="chart-list" scroll-y wx:else>
+    <!-- 心率趋势图 -->
+    <view class="chart-item">
+      <view class="chart-title">心率趋势 (次/分)</view>
+      <canvas canvas-id="heartRateChart" class="chart-canvas"></canvas>
+    </view>
+
+    <!-- 收缩压趋势图 -->
+    <view class="chart-item">
+      <view class="chart-title">收缩压趋势 (mmHg)</view>
+      <canvas canvas-id="systolicChart" class="chart-canvas"></canvas>
+    </view>
+
+    <!-- 舒张压趋势图 -->
+    <view class="chart-item">
+      <view class="chart-title">舒张压趋势 (mmHg)</view>
+      <canvas canvas-id="diastolicChart" class="chart-canvas"></canvas>
+    </view>
+
+    <!-- 体重趋势图 -->
+    <view class="chart-item">
+      <view class="chart-title">体重趋势 (kg)</view>
+      <canvas canvas-id="weightChart" class="chart-canvas"></canvas>
+    </view>
+  </scroll-view>
+</view>

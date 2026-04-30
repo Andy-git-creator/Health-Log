@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/calculator/calculator",
+    "pages/recorder/recorder",
+    "pages/dataList/dataList",
+    "pages/trend/trend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4CAF50",
+    "navigationBarTitleText": "健康管家",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "miniprogramRoot": "./",
+  "libVersion": "2.24.0",
+  "compatibility": {
+    "ignoreMp": [
+      "wx.navigateTo"
+    ]
+  }
+}

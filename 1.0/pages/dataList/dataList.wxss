@@ -1,0 +1,119 @@
+.container {
+  padding: 20rpx 30rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+/* 空数据提示 */
+.empty-tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100rpx 0;
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+/* 数据列表 */
+.data-list {
+  height: calc(100vh - 200rpx);
+  margin-bottom: 30rpx;
+}
+
+.data-item {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+}
+
+.data-content {
+  flex: 1;
+}
+
+.record-time {
+  margin-bottom: 15rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.data-cell {
+  width: 48%;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 10rpx;
+}
+
+.value {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 删除按钮 */
+.delete-btn {
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ff4757;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.delete-btn-hover {
+  background: #ff3838;
+}
+
+/* 清空全部按钮 */
+.clear-all-btn {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  border: none;
+}
+
+.clear-all-btn-hover {
+  background: #c0392b;
+}

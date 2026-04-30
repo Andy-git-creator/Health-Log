@@ -1,0 +1,64 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="page-title">历史身体数据</view>
+
+  <!-- 空数据提示：有数据时隐藏 -->
+  <view class="empty-tip" wx:if="{{bodyData.length === 0}}">
+    <text class="empty-icon">📭</text>
+    <text class="empty-text">暂无历史数据，请先录入数据</text>
+    <button class="go-record-btn" bindtap="goToRecorder">立即录入</button>
+  </view>
+
+  <!-- 数据列表：无数据时隐藏 -->
+  <scroll-view class="data-list" scroll-y wx:if="{{bodyData.length > 0}}">
+    <view class="data-item" wx:for="{{bodyData}}" wx:key="index">
+      <!-- 数据详情 -->
+      <view class="data-content">
+        <view class="record-time">
+          <text class="label">记录时间：</text>
+          <text class="value">{{item.recordTime}}</text>
+        </view>
+        <view class="data-row">
+          <view class="data-cell">
+            <text class="label">心率：</text>
+            <text class="value">{{item.heartRate}} 次/分</text>
+          </view>
+          <view class="data-cell">
+            <text class="label">体重：</text>
+            <text class="value">{{item.weight}} kg</text>
+          </view>
+        </view>
+        <view class="data-row">
+          <view class="data-cell">
+            <text class="label">收缩压：</text>
+            <text class="value">{{item.systolic}} mmHg</text>
+          </view>
+          <view class="data-cell">
+            <text class="label">舒张压：</text>
+            <text class="value">{{item.diastolic}} mmHg</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 删除按钮 -->
+      <button 
+        class="delete-btn" 
+        bindtap="deleteData" 
+        data-index="{{index}}"
+        hover-class="delete-btn-hover"
+      >
+        删除
+      </button>
+    </view>
+  </scroll-view>
+
+  <!-- 清空全部按钮：有数据时显示 -->
+  <button 
+    class="clear-all-btn" 
+    wx:if="{{bodyData.length > 0}}" 
+    bindtap="clearAllData"
+    hover-class="clear-all-btn-hover"
+  >
+    清空全部数据
+  </button>
+</view>
