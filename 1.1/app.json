@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bmr/bmr",
+    "pages/health/health",
+    "pages/records/records",
+    "pages/contact/contact"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#A896D9",
+    "navigationBarTitleText": "健康管家",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2"
+}

@@ -1,0 +1,14 @@
+/* 全局浅紫色背景和玻璃风格 */
+page {
+  background: #f1eafd;
+  min-height: 100vh;
+}
+
+.liquid-glass {
+  background: rgba(255,255,255,0.17);
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(118,82,178,.12);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  padding: 24px;
+}

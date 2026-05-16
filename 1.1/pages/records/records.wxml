@@ -1,0 +1,22 @@
+<view class="liquid-glass">
+  <view class="h2">身体数据记录</view>
+  <form bindsubmit="onRecord">
+    <input class="input" name="heart" type="number" placeholder="心率(次/分)" required />
+    <input class="input" name="sbp" type="number" placeholder="收缩压(mmHg)" required />
+    <input class="input" name="dbp" type="number" placeholder="舒张压(mmHg)" required />
+    <input class="input" name="weight" type="number" placeholder="体重(kg)" required />
+    <button class="btn" form-type="submit">保存</button>
+  </form>
+  <button class="btn" bindtap="showTrend" style="margin-top:12px;">查看趋势图</button>
+  <view wx:for="{{list}}" wx:key="index" class="one-data">
+  <view>时间: {{item.time}}</view>
+  <view>
+    心率: {{item.heart}} | 收缩压: {{item.sbp}} | 舒张压: {{item.dbp}} | 体重: {{item.weight}}
+    <button class="del-btn" size="mini" data-index="{{index}}" bindtap="onDeleteRecord">删除</button>
+  </view>
+</view>
+  <cover-view wx:if="{{showCanvas}}" class="canvas-bg">
+    <canvas canvas-id="trend" style="width:300px; height:300px;"></canvas>
+    <button class="btn" size="mini" bindtap="hideTrend">关闭</button>
+  </cover-view>
+</view>

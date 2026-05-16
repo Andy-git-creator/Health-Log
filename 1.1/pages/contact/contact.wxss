@@ -1,0 +1,6 @@
+@import "../bmr/bmr.wxss";
+.ct-item {
+  margin: 16px 0 0 0;
+  font-size: 16px;
+  color: #684fa0;
+}

@@ -1,0 +1,11 @@
+.h2 { font-size: 20px; font-weight: bold; color: #7B5BAA; margin-bottom: 20px; text-align:center;}
+.input {
+  background: rgba(255,255,255,.6);
+  border: 1px solid #cfcbe6;
+  border-radius: 9px;
+  margin: 12px 0;
+  padding: 14px;
+  font-size: 17px;
+}
+.res-text { margin-top: 12px; color: #333; }
+.highlight { color: #7B5BAA; font-weight: bold; }

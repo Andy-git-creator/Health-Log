@@ -1,0 +1,19 @@
+<view class="liquid-glass">
+  <view class="h2">基础代谢测试</view>
+  <form bindsubmit="onSubmit">
+    <input class="input" name="age" type="number" maxlength="3" placeholder="请输入您的年龄" required />
+    <picker mode="selector" name="gender" range="{{genderArray}}" value="{{genderIndex}}" bindchange="onGenderChange">
+      <view class="input">性别：{{genderArray[genderIndex]}}</view>
+    </picker>
+    <input class="input" name="height" type="number" placeholder="请输入您的身高(cm)" required />
+    <input class="input" name="weight" type="number" placeholder="请输入今日空腹体重(kg)" required />
+    <picker mode="selector" name="activity" range="{{activityArray}}" value="{{activityIndex}}" bindchange="onActivityChange">
+      <view class="input">运动情况：{{activityArray[activityIndex]}}</view>
+    </picker>
+    <button form-type="submit" class="btn">计算</button>
+  </form>
+  <view wx:if="{{result}}">
+    <view class="res-text">基础代谢：<text class="highlight">{{result.bmr}} kcal</text></view>
+    <view class="res-text">建议摄入：<text class="highlight">{{result.cal}}</text> 大卡</view>
+  </view>
+</view>

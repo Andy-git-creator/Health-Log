@@ -1,0 +1,25 @@
+@import "../bmr/bmr.wxss";
+.one-data {
+  margin: 12px 0;
+  padding: 10px;
+  background: #f5edf8;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.canvas-bg {
+  position: fixed;
+  left: 0; bottom: 0; right: 0; top: 0;
+  background: rgba(200,180,230,.8);
+  z-index: 99;
+  display: flex; flex-direction: column;
+  align-items:center; justify-content:center;
+}.del-btn {
+  margin-left: 10px;
+  background: #f37b1d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.btn.warn {
+  background: #e74c3c;
+}

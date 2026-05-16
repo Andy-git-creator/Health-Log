@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="liquid-glass main">
+    <image src="../../assets/logo.png" mode="widthFix" class="logo"></image>
+    <view class="title">健康计算器</view>
+    <button class="btn" bindtap="toBMR">基础代谢测试</button>
+    <button class="btn" bindtap="toHealth">BMI/CMI计算</button>
+    <button class="btn" bindtap="toRecords">数据记录</button>
+    <button class="btn" bindtap="toContact">联系我们</button>
+  </view>
+</view>

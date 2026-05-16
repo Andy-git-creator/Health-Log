@@ -1,0 +1,11 @@
+<view class="liquid-glass">
+  <view class="h2">联系我们</view>
+  <view class="ct-item">
+    <text>邮箱：</text>
+    <text selectable="true">czyandyac@gmail.com</text>
+  </view>
+  <view class="ct-item">
+    <text>GitHub：</text>
+    <text selectable="true">Andy-git-creator</text>
+  </view>
+</view>

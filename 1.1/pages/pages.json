@@ -1,0 +1,19 @@
+{
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#1e3a8a",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "cloud://your-cloud.YourCloudId/首页.png"  
+      },
+      {
+        "pagePath": "pages/health-manager/index",
+        "text": "健康管家"
+      }
+    ]
+  },
+  "navigationBarTitleText": "健康计算器"
+}

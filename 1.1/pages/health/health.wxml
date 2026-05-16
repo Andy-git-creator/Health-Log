@@ -1,0 +1,25 @@
+<view class="liquid-glass">
+  <view class="h2">身体指数计算</view>
+  <form bindsubmit="onSubmit">
+    <picker name="typeIndex" range="{{typeArray}}" value="{{typeIndex}}" bindchange="onTypeChange">
+      <view class="input">选择指数：{{typeArray[typeIndex]}}</view>
+    </picker>
+    <view wx:if="{{typeIndex==0}}">
+      <picker name="bmiStd" range="{{bmiStdArray}}" value="{{bmiStdIndex}}" bindchange="onBMIStdChange">
+        <view class="input">BMI标准：{{bmiStdArray[bmiStdIndex]}}</view>
+      </picker>
+      <input class="input" name="bmi_height" type="number" placeholder="请输入身高(cm)" required/>
+      <input class="input" name="bmi_weight" type="number" placeholder="请输入体重(kg)" required/>
+    </view>
+    <view wx:elif="{{typeIndex==1}}">
+      <input class="input" name="cmi_height" type="number" placeholder="身高(cm)" required/>
+      <input class="input" name="cmi_waist" type="number" placeholder="腰围(cm)" required/>
+      <input class="input" name="cmi_tg" type="number" placeholder="甘油三酯(mmol/L)" required/>
+      <input class="input" name="cmi_hdl" type="number" placeholder="高密度脂蛋白(mmol/L)" required/>
+    </view>
+    <button class="btn" form-type="submit">计算</button>
+  </form>
+  <view wx:if="{{result}}">
+    <view class="res-text">{{result}}</view>
+  </view>
+</view>
